@@ -1,0 +1,30 @@
+[
+    {
+        "Name": "testbridge-1",
+        "Id": "c170a835ffe3aa74e93a6e910f11ec140b0c98461d13d487faacd2b21a1553fe",
+        "Created": "2019-03-06T20:36:25.949453764+05:30",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "192.168.0.0/16",
+                    "IPRange": "192.168.5.0/24"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {}
+    }
+]

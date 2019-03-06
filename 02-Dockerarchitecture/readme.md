@@ -34,7 +34,7 @@ Docker daemon listens and performs the regarding actions asked by docker client.
 - These docker images can be pushed and pulled by **Docker Hub** like GitHub (But the concept is not about VCS).
 - Containers communicate with docker daemon via **docker images**, that means changes in container reflects in image temporarily.
 
-```commandline
+```
 Container <-----> Docker Image <-----> Docker Daemon
 ```
 

@@ -110,6 +110,13 @@ docker -v
 ```
 Output like : `Docker version 18.09.2, build 6247962` 
 
+and
+
+```commandline
+docker run hello-world
+```
+
+Output like : `Hello from Docker! ....` 
 
 **Step 7.** Pull Image from Docker Hub and run
 ```commandline
