@@ -99,3 +99,8 @@ Here we need to tell the exact port for expose.
 
 This command allow the docker itself to map a port.
 - `docker container run -itd -name contName -P imageName`
+
+
+**Notes :**
+
+- Docker container lives only for the time of your command process which was declared inside the docker file.

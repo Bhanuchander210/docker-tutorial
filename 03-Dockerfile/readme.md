@@ -171,6 +171,30 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ```
 
 
+###### ADD vs COPY
+
+Docker discourages of using `ADD` command because of the image size that matters. It always copy or download remote files
+and extract compressed files within the docker image. So that use other strategies to add other files.
+
+We can avoid using the `ADD` command shown below,
+
+```commandline
+ADD http://example.com/big.tar.xz /usr/src/things/
+RUN tar -xJf /usr/src/things/big.tar.xz -C /usr/src/things
+RUN make -C /usr/src/things all
+```
+
+Instead of this we can use it like this,
+
+```commandline
+RUN mkdir -p /usr/src/things \
+    && curl -SL http://example.com/big.tar.xz \
+    | tar -xJC /usr/src/things \
+    && make -C /usr/src/things all
+```
+
+See more [Docker best practices](https://docs.docker.com/v17.09/engine/userguide/eng-image/dockerfile_best-practices/)
+
 ###### Containerizing apache web-server
 
 Apache web-serve has been containerized from the file `apache/Dockerfile`
@@ -199,8 +223,46 @@ Here, we can see the apache server in local,
 
 ![apache](/assets/img/apache.png)
 
+
+
+###### Containerization of JAVA App
+
+A Java file **Example.java** compiled as [Example.class](/03-Dockerfile/javatest/Example.class) and stored here.
+
+```java
+import java.util.Date;
+import java.lang.Thread;
+import java.lang.String;
+import java.io.*;
+class Example{
+        public static void main(String[] args) throws Exception{
+                String fileName = "Log-file.txt";
+                PrintWriter writer = new PrintWriter(new File(fileName));
+                for (int i=1 ; i < 5; i++){
+                        Thread.sleep(1000);
+                        writer.println("[INFO] {}".format(new Date().toString()));
+                }
+                writer.close();
+        }
+}
+```
+
+The [Dockerfile](/03-Dockerfile/javatest/Dockerfile) for this java application created as shown below,
+
+```text
+FROM store/oracle/serverjre:8
+LABEL Creator: "Bhanuchander"
+WORKDIR /usr
+COPY Example.class .
+RUN java Example
+CMD ["bash"]
+```
+
+It will create a **Log-file.txt** file while the container starts.
+
 ###### Reference:
 ---
 
 - [Docker Doc - Dockerfile](https://docs.docker.com/engine/reference/builder/)
 - [Docker Cheat Sheet by wsargent](https://github.com/wsargent/docker-cheat-sheet)
+- [Docker copy and add key difference by ryanwhocodes](https://medium.freecodecamp.org/dockerfile-copy-vs-add-key-differences-and-best-practices-9570c4592e9e)

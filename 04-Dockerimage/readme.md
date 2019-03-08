@@ -136,3 +136,11 @@ docker volume prune
 docker network prune
 docker system prune
 ```
+
+###### Docker Image Size
+
+- To view the Image size
+
+```commandline
+docker image inspect imageName:latest --format='{{.Size}}'
+```
