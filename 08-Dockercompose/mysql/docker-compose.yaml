@@ -1,0 +1,17 @@
+version: '2.2'
+services:
+   db:
+     image: mysql:5.7
+     container_name: localmysql
+     ports:
+       - "3306:3306"
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: password
+       MYSQL_DATABASE: itachi
+       MYSQL_USER: bhanuchander
+       MYSQL_PASSWORD: password
+volumes:
+    db_data:

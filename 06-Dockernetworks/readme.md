@@ -73,3 +73,11 @@ map[bridge:0xc4205fc000 testbridge-1:0xc4205fc0c0]
 ```
 
 The total inspected specification file is attached here as [connected_apachecontainer.json](/assets/files/connected_apachecontainer.json).
+
+
+###### Quick Commands
+
+- To get the container ip 
+```commandline
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' containerName
+```
