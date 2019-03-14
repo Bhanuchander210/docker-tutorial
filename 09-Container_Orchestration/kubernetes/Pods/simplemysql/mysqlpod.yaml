@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-mysql
+  labels:
+    localName: testMysql-in-kubernetes
+spec:
+  containers:
+  - name: pod-mysql
+    image: mysql:5.7
+    ports:
+    - containerPort: 3036

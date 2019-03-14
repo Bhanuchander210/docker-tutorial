@@ -1,0 +1,7 @@
+version: '2.2'
+services:
+   minikube:
+     build: ./minikube
+     ports:
+       - "8080:8080"
+     container_name: minikubecont

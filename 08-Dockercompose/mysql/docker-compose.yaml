@@ -6,12 +6,17 @@ services:
      ports:
        - "3306:3306"
      volumes:
-       - db_data:/var/lib/mysql
+       - localdb_data:/var/lib/mysql
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: password
        MYSQL_DATABASE: itachi
        MYSQL_USER: bhanuchander
        MYSQL_PASSWORD: password
+     healthcheck:
+       test: "/usr/bin/mysql --user=root --password=password --execute \"SHOW DATABASES;\""
+       interval: 2s
+       timeout: 20s
+       retries: 10
 volumes:
-    db_data:
+   localdb_data:
