@@ -104,6 +104,23 @@ minikube start
 kubectl describe pod pod-name
 ```
 
+###### kubernetes objects
+
+```commandline
+kubectl api-resources
+```
+
+In my system around **53** types of kubernetes objects are available.
+
+```text
+NAME                              SHORTNAMES   APIGROUP                       NAMESPACED   KIND
+bindings                                                                      true         Binding
+componentstatuses                 cs                                          false        ComponentStatus
+configmaps                        cm                                          true         ConfigMap
+endpoints                         ep                                          true         Endpoints
+events                            ev                                          true         Event
+``` 
+
 #### References
 
 - [Kubernetes vs Rancher vs Docker Machine](https://stackshare.io/stackups/docker-machine-vs-kubernetes-vs-rancher)
