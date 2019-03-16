@@ -34,10 +34,10 @@ containerized applications.
 ---
 
 - Reproducibility
-    Like **JVM**, docker also has same facility to run any device. 
+    Like **JVM**, docker also has same facility to run processes in any device. 
     All images built from the same Dockerfile will function identically.
 - Isolation
-    A container doesn't going to affect any other installations or configs on the system or on other dockers.
+    A container does not going to affect any other installations or configs on the system or on other dockers.
     By using separate containers for each component of an application (for example a web server, front end, and database for hosting a web site), you can avoid conflicting dependencies.
 - Security
     Normal ideology of having multiple containers means having security. 
@@ -142,3 +142,6 @@ docker container ls -a
 - [Docker Essentials by Udemy](https://www.udemy.com/docker-essentials)
 - [Docker tutorial by techglimpse](https://techglimpse.com/docker-installation-tutorial-centos/)
 - [When and Why Dockers by linode](https://www.linode.com/docs/applications/containers/when-and-why-to-use-docker/)
+
+[next](/02-Dockerarchitecture/readme.md)
+[home](/readme.md) 

@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops
+  labels:
+    app: devops
+spec:
+  ports:
+    - port: 10098
+      targetPort: 10098
+  selector:
+    app: devops
+    tier: frontend
+  type: NodePort
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: devops
+  labels:
+    app: devops
+spec:
+  selector:
+    matchLabels:
+      app: devops
+      tier: frontend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: devops
+        tier: frontend
+    spec:
+      containers:
+      - image: devopnewimage:latest
+        name: devops
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 10098
+          name: devops

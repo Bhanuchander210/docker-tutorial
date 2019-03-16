@@ -78,3 +78,6 @@ docker container inspect --format "{{json .Mounts}}" containerName | python -m j
 ```
 
 So these kind of mounted volumes can be found in `/var/lib/docker/volumes`
+
+[next](/07-Dockerstorage/readme.md)
+[home](/readme.md)
