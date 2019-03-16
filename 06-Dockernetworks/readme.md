@@ -35,6 +35,10 @@ Or we can use **IPs** to communicate the containers which are provided by IPAM D
 This network used for **Swarm Mode** of docker. Multiple cluster of hosts connected in single network. It placed on the 
 underlay network which collects the ip related details of all connected containers.
 
+- Macvlan Network
+
+Each containers which connected to this network, should be assigned by a Physical MAC address. See the official [documentation](https://docs.docker.com/network/macvlan/) for more details.
+
 
 ###### Creating Docker Network
 
