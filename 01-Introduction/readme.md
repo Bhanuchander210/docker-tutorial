@@ -126,9 +126,13 @@ docker container run -itd --name myOwnNginx -p 8080:80 nginx:latest
 
 After the pull, we can directly run the container from above shown command with specific `container name` and exposed `port`.
 
-So after that, we can get the nginx.
+So after that, we can get the nginx in our local `localhost:8080`.
+
+---
 
 ![img](/assets/img/nginx.png)
+
+---
 
 Or we can check by command where container is running or not.
 

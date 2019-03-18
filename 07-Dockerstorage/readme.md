@@ -1,6 +1,6 @@
 ## Containers Storage
 
-###### Intro
+### Intro
 
 - Container data needs to be backed up some where as a permanent storage.
 - As we studied it has two types of layers shown below,
@@ -30,7 +30,7 @@ We can store this important data at anywhere in such as
 These data are stored as **Docker Volumes** which is completed isolated from the host file system.
 It is also controlled by Docker command line, secure to ship and more reliable.
 
-###### Docker Volumes
+### Docker Volumes
 
 - Storage objects of docker
 - Mounted to containers
@@ -43,7 +43,7 @@ As shown in the figure,
 1. User also provides commands to the docker engine
 1. According to the commands the data would be saved as volumes as Docker volumes at anywhere in the container network.
  
-###### TMPFS
+### TMPFS
  
 - Temporary File System Mount, This is the third option if the container runs on **linux**.
 - Here the container can store the files on outside of the container's writable layers.
@@ -51,7 +51,7 @@ As shown in the figure,
  
  For example : We can store the `ssh` keys inside this tmpfs for security purpose.
  
-###### Commands
+### Commands
 
 - Docker volume create volName
 - Docker volume ls volName
@@ -59,19 +59,19 @@ As shown in the figure,
 - Docker volume inspect volName
 - Docker volume create
 
-**Mounting the volume to the Container**
+- Mounting the volume to the Container
 
 ```commandline
 docker run -d --volume volName:/tmp containerName
 ```
 
-**To List the volumes not Mounted**
+- To List the volumes not Mounted
 
 ```commandline
 docker volume ls --filter "dangling=true"
 ```
 
-**Check using containers**
+- Check using containers
 
 ```commandline
 docker container inspect --format "{{json .Mounts}}" containerName | python -m json.tool

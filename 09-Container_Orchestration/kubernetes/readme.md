@@ -1,4 +1,4 @@
-#### Kubernetes
+## Kubernetes
 
 <img src="https://github.com/kubernetes/kubernetes/raw/master/logo/logo.png" width="100">
 
@@ -12,7 +12,7 @@ Container Orchestrator which can replace docker-compose as rich in deployment/re
 - Deployment
 
 
-##### Pod, Replica-Set and Deployment
+### Pod, Replica-Set and Deployment
 
 <img src="https://github.com/Bhanuchander210/docker-tutorial/raw/master/assets/img/eplicaset.png" width="100">
 
@@ -31,7 +31,7 @@ The Importance of Deployment,
 - It can update the replicas with zero down time.
 - Deployment controller contains deployment objects which can create new Replicas, remove old replicas excluding their resources and adopt it with the updated one.
 
-##### Before you start
+### Before you start
 
 Initially The communication between a **kubernetes cluster** and our `kubectl` command line tool should be established.
 See the official document [here](https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/#before-you-begin)
@@ -44,7 +44,7 @@ Try the kubernetes clusters
 - [Katacoda](https://www.katacoda.com/courses/kubernetes/playground) (Online)
 - [Play with Kubernetes](http://labs.play-with-k8s.com/) (Online)
 
-###### Minikube
+### Minikube
 
 - [How to setup and start minikube ?](https://kubernetes.io/docs/tasks/tools/install-minikube/)
 - Start minikube once installed
@@ -53,11 +53,11 @@ Try the kubernetes clusters
 minikube start
 ```
 
-###### kubernetes commands
+### kubernetes commands
 
 - [Command page](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
 
-###### Some quick commands
+### Some quick commands
 
 - Kubernet describe about pod logs
 
@@ -65,7 +65,7 @@ minikube start
 kubectl describe pod pod-name
 ```
 
-###### kubernetes objects
+### kubernetes objects
 
 ```commandline
 kubectl api-resources
@@ -83,13 +83,13 @@ events                            ev                                          tr
 ``` 
 
 
-##### How to update the deployment with zero-down time
+### How to update the deployment with zero-down time
 
 ```commandline
 kubectl apply -f config-file.yaml
 ```
 
-##### How to import local image into kubernetes
+### How to import local image into kubernetes
 
 ```commandline
 # Start minikube
@@ -110,7 +110,7 @@ kubectl run hello-foo --image=foo:0.0.1 --image-pull-policy=Never
 #   imagePullPolicy: Never
 ```
 
-#### References
+### References
 
 - [Kubernetes official doc](https://kubernetes.io/docs/home/)
 - [Kubernetes by udemy](https://www.udemy.com/kubernetes-docker)

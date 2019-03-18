@@ -1,19 +1,19 @@
 ## Docker Networks
 ---
 
-###### Docker Network Drivers
+### Docker Network Drivers
 
 - It is a piece of software which enables networking for containers.
 - Native network drivers are shipped with docker engine.
 - IP Address management drivers provide default subnets if not specified by admin.
 
-###### Architecture
+### Architecture
 
 ![Arch](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/07/Architecture-of-Container-Networking-Model@2x.png)
 
 *Image Source : [Ref](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/07/Architecture-of-Container-Networking-Model@2x.png)*
 
-###### Native Network Drivers
+### Native Network Drivers
 
 - Host Network
 
@@ -40,7 +40,7 @@ underlay network which collects the ip related details of all connected containe
 Each containers which connected to this network, should be assigned by a Physical MAC address. See the official [documentation](https://docs.docker.com/network/macvlan/) for more details.
 
 
-###### Creating Docker Network
+### Creating Docker Network
 
 - To create a bridge network with default info
 
@@ -60,7 +60,7 @@ The inspected specification *json* files are attached here.
 - [testbridge-1.json](/assets/files/testbridge-1.json)
 
 
-###### Connect Disconnect and Inspect
+### Connect Disconnect and Inspect
 
 We can connect a container to a network like shown below command,
 
@@ -79,7 +79,7 @@ map[bridge:0xc4205fc000 testbridge-1:0xc4205fc0c0]
 The total inspected specification file is attached here as [connected_apachecontainer.json](/assets/files/connected_apachecontainer.json).
 
 
-###### Quick Commands
+### Quick Commands
 
 - To get the container ip 
 ```commandline

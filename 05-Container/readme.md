@@ -66,30 +66,31 @@ docker container kill containerName/containerId
 docker container rm containerName/containerId
 ```
 
-###### Containers Attach and Exec
+#### Containers Attach and Exec
 
 It is for attaching the Standard I/O and Standard Error of a container to the terminal.
 It will connect to a running container. If we exit it, the container also will be exited.
-So that using the command **attach** is not highly recommended. Or You can use `ctrl + p` or `ctrl + q` to detach
+So that using the command *attach* is not highly recommended. Or You can use `ctrl + p` or `ctrl + q` to detach
 the container.
 
-**Attach**
+- Attach
 
 ```commandline
 docker container attach containerName
 ```
-So it will enter inside the running container.
 
+- Exec
 
 In Execute, we can run any command we want with the container. 
-**Exec**
 
 ```commandline
 docker exec -it containerName command
 ```
 
+Note: options \[i,t\] are used to get interactive and teletype terminal. 
 
-###### Container Exposure
+
+#### Container Exposure
 ---
 
 As we know that, The port exposure can be done in two ways
@@ -101,7 +102,7 @@ This command allow the docker itself to map a port.
 - `docker container run -itd -name contName -P imageName`
 
 
-**Notes :**
+Notes :
 
 - Docker container lives only for the time of your command process which was declared inside the docker file.
 

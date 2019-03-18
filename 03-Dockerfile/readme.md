@@ -1,6 +1,6 @@
 ## Dockerfile
 
-##### Introduction
+### Introduction
 
 - contains sequential sets of instructions.
 - Prime way to interact with docker daemon.
@@ -10,8 +10,7 @@
 - Docker daemon can reuse the pre-created layer for a docker file layer.
 
 
-###### Structure
----
+### Structure
 
 **Rule of Thumb : The name should be `Dockerfile`**
 
@@ -53,8 +52,7 @@ It has sequential instructions, that can be categorized as
 |STOPSIGNAL| sets the system call signal that will be sent to the container to exit.|
 |ENTRYPOINT| configures a container that will run as an executable.|
 
-###### Build Docker Filer
----
+### Build Docker Filer
 
 **Step 1.** Create a dockerfile
 
@@ -105,19 +103,19 @@ CMD ["bash"]
 
 It uses the command `RUN` with some configuration commands such as creating directories, update and installations.
 
-###### How to run image
+- How to run image
 
 ```commandline
 docker run -itd --name containerName imageName
 ```
 
-###### Check Container information
+- Check Container information
 
 ```commandline
 docker ps -a
 ```
 
-###### Docker execution
+- Docker execution
 
 ```commandline
 docker exec -it configcontainer bash
@@ -140,7 +138,7 @@ Examples
 ```
 
 
-###### Exposing technique
+### Exposing technique
 
 - Dockerfile Instruction
 - Docker run command
@@ -171,7 +169,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ```
 
 
-###### ADD vs COPY
+### ADD vs COPY
 
 Docker discourages of using `ADD` command because of the image size that matters. It always copy or download remote files
 and extract compressed files within the docker image. So that use other strategies to add other files.
@@ -195,7 +193,7 @@ RUN mkdir -p /usr/src/things \
 
 See more [Docker best practices](https://docs.docker.com/v17.09/engine/userguide/eng-image/dockerfile_best-practices/)
 
-###### Containerizing apache web-server
+### Containerizing apache web-server
 
 Apache web-serve has been containerized from the file `apache/Dockerfile`
 
@@ -219,13 +217,15 @@ Run the command to crate and start the container
 docker run -itd --name apachecontainer -p 8080:80 apacheimage
 ```
 
-Here, we can see the apache server in local,
+Here, we can see the apache server in `localhost:8080`,
 
+---
 ![apache](/assets/img/apache.png)
+---
 
+Note: Check the port availability in your local, before running the docker with port mapping.  
 
-
-###### Containerization of JAVA App
+### Containerization of JAVA App
 
 A Java file **Example.java** compiled as [Example.class](/03-Dockerfile/javatest/Example.class) and stored here.
 
@@ -260,7 +260,7 @@ CMD ["bash"]
 
 It will create a **Log-file.txt** file while the container starts.
 
-###### Reference:
+### Reference:
 ---
 
 - [Docker Doc - Dockerfile](https://docs.docker.com/engine/reference/builder/)

@@ -19,7 +19,7 @@
 
 - **Installation :**  follow this official [Documentation](https://docs.docker.com/compose/install/)
 
-###### Structure of docker composer
+### Structure of docker composer
 
 The file should be saved as : `docker-compose.yaml` or `docker-compose.yml`.
 
@@ -63,7 +63,7 @@ Here you can see, This file contains two various sections,
 - Structure
 - Volumes
 
-####### Commands
+### Commands
 
 - `docker-compose up`  To run (create and run) the docker containers from composed file.
 - `docker-compose down`  To stop and remove the things containers, networks, images and volumes.

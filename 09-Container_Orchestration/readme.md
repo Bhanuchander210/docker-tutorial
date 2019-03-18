@@ -31,13 +31,13 @@ at-least the half and above of workers needs to be alive for running the swarm m
 > Required No. of working Nodes = (Total Nodes / 2) + 1
 
 
-#### Swarm Setup
+### Swarm Setup
 
 - [Kubernetes](https://kubernetes.io/)
 - [Rancher](https://rancher.com/)
 - [Docker Machine](https://docs.docker.com/machine/)
 
-#### References
+### References
 
 - [Kubernetes vs Rancher vs Docker Machine](https://stackshare.io/stackups/docker-machine-vs-kubernetes-vs-rancher)
 
