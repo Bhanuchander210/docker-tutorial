@@ -33,7 +33,6 @@ Docker Image ----
 
 
 #### Docker search
-**Examples :**
 
 - Total search
 
@@ -54,8 +53,6 @@ docker search --format "table {{.Name}} {{.IsOfficial}}" ubuntu
 ```
  
 #### Docker images
-
-**Example :**
 
 - To list all images
 ```commandline
@@ -87,8 +84,6 @@ nginx               1.10.0-alpine       8328c2365672        2 years ago         
 ```
 
 #### Docker Inspect
-
-Examples :
 
 - To inspect the repo
 ```commandline

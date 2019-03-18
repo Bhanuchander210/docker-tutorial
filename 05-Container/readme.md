@@ -24,8 +24,6 @@ A Container run provides us,
 It will create docker container with the status **created**. That means it will not start the instance just
 create a ready-up container.
 
-Example :
-
 ```commandline
 docker container create -it --name containerName imageName:tagName
 ```
@@ -34,8 +32,6 @@ docker container create -it --name containerName imageName:tagName
 
 This method itself do two tasks of **creating** and **running** the container respectively.
 After executing this command, the status of the container will be **Up for (n)times**.
-
-Example :
 
 ```commandline
 docker container run --itd --name containerName imageName:tagName 
