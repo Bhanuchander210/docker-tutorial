@@ -42,4 +42,4 @@ at-least the half and above of workers needs to be alive for running the swarm m
 - [Kubernetes vs Rancher vs Docker Machine](https://stackshare.io/stackups/docker-machine-vs-kubernetes-vs-rancher)
 
 
-[home](/readme.md)
+[home](/)

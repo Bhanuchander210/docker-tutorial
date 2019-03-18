@@ -147,5 +147,5 @@ docker container ls -a
 - [Docker tutorial by techglimpse](https://techglimpse.com/docker-installation-tutorial-centos/)
 - [When and Why Dockers by linode](https://www.linode.com/docs/applications/containers/when-and-why-to-use-docker/)
 
-[next](/02-Dockerarchitecture/readme.md)
-[home](/readme.md) 
+[next](/02-Dockerarchitecture)
+[home](/) 

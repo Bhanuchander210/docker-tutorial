@@ -75,5 +75,5 @@ Here you can see, This file contains two various sections,
 
 To view more See this [official docker-compose documentation](https://docs.docker.com/compose/reference/overview).
 
-[next](/08-Dockercompose/readme.md)
-[home](/readme.md) 
+[next](/08-Dockercompose)
+[home](/)

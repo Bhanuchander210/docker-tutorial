@@ -52,5 +52,5 @@ So by summarizing all of this would be like this,
 |Docker API|Containers||
 ||Images||
 
-[next](/03-Dockerfile/readme.md)
-[home](/readme.md)
+[next](/03-Dockerfile)
+[home](/) 

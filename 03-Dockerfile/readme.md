@@ -268,5 +268,5 @@ It will create a **Log-file.txt** file while the container starts.
 - [Docker copy and add key difference by ryanwhocodes](https://medium.freecodecamp.org/dockerfile-copy-vs-add-key-differences-and-best-practices-9570c4592e9e)
 
 
-[next](/04-Dockerimage/readme.md)
-[home](/readme.md)
+[next](/04-Dockerimage)
+[home](/)

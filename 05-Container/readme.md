@@ -102,5 +102,5 @@ Notes :
 
 - Docker container lives only for the time of your command process which was declared inside the docker file.
 
-[next](/06-Dockernetworks/readme.md)
-[home](/readme.md)
+[next](/06-Dockernetworks)
+[home](/)

@@ -86,5 +86,5 @@ The total inspected specification file is attached here as [connected_apachecont
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' containerName
 ```
 
-[next](/07-Dockerstorage/readme.md)
-[home](/readme.md)
+[next](/07-Dockerstorage)
+[home](/)

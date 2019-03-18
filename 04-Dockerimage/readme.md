@@ -136,5 +136,5 @@ docker system prune
 docker image inspect imageName:latest --format='{{.Size}}'
 ```
 
-[next](/05-Container/readme.md)
-[home](/readme.md)
+[next](/05-Container)
+[home](/)
