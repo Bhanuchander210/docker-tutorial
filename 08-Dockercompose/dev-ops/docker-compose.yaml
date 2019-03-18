@@ -1,0 +1,44 @@
+
+version: '2.2'
+services:
+   db:
+     image: mysql:5.7
+     container_name: mysql_database_devop
+     ports:
+       - "3307:3306"
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: word@press
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: abc@123
+     healthcheck:
+       test: "/usr/bin/mysql --user=root --password=word@press --execute \"SHOW DATABASES;\""
+       interval: 5s
+       timeout: 60s
+       retries: 20
+     networks:
+       - app_net
+
+   devop:
+     depends_on:
+       db:
+         condition: service_healthy
+     build: ./CygNet
+     ports:
+       - "10098:10098"
+     networks:
+       - app_net
+     container_name: devopcontainer
+     extra_hosts:
+      - "localhost:192.168.11.168"
+     volumes:
+       - ./CygNet/logs:/usr/CygNet/logs
+volumes:
+    db_data:
+networks:
+    app_net:
+        driver: "bridge"
+ 

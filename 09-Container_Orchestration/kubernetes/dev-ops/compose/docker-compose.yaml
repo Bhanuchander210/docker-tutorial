@@ -1,0 +1,20 @@
+
+version: '2.2'
+services:
+   devopnewimage:
+     build: ./CygNet
+     ports:
+       - "10098:10098"
+     networks:
+       - app_net
+     container_name: devopcontainer
+     extra_hosts:
+      - "localhost:192.168.11.168"
+     volumes:
+       - ./CygNet/logs:/usr/CygNet/logs
+volumes:
+    db_data:
+networks:
+    app_net:
+        driver: "bridge"
+ 
