@@ -17,9 +17,9 @@ A Container run provides us,
 - Memory  (#RAM)
 - Storage
 
-###### Creating containers
+### Creating containers
 
-**Method 1. Using create command**
+- Method 1. Using create command
 
 It will create docker container with the status **created**. That means it will not start the instance just
 create a ready-up container.
@@ -28,7 +28,7 @@ create a ready-up container.
 docker container create -it --name containerName imageName:tagName
 ```
 
-**Method 2. Using run command**
+- Method 2. Using run command
 
 This method itself do two tasks of **creating** and **running** the container respectively.
 After executing this command, the status of the container will be **Up for (n)times**.
@@ -37,8 +37,7 @@ After executing this command, the status of the container will be **Up for (n)ti
 docker container run --itd --name containerName imageName:tagName 
 ```
 
-
-###### Working with containers
+### Working with containers
 
 - Start
 - Stop
@@ -62,7 +61,7 @@ docker container kill containerName/containerId
 docker container rm containerName/containerId
 ```
 
-#### Containers Attach and Exec
+### Containers Attach and Exec
 
 It is for attaching the Standard I/O and Standard Error of a container to the terminal.
 It will connect to a running container. If we exit it, the container also will be exited.
@@ -86,8 +85,7 @@ docker exec -it containerName command
 Note: options \[i,t\] are used to get interactive and teletype terminal. 
 
 
-#### Container Exposure
----
+### Container Exposure
 
 As we know that, The port exposure can be done in two ways
 

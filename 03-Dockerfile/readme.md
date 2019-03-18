@@ -261,7 +261,6 @@ CMD ["bash"]
 It will create a **Log-file.txt** file while the container starts.
 
 ### Reference:
----
 
 - [Docker Doc - Dockerfile](https://docs.docker.com/engine/reference/builder/)
 - [Docker Cheat Sheet by wsargent](https://github.com/wsargent/docker-cheat-sheet)

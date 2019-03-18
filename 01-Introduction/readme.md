@@ -1,9 +1,9 @@
-## Docker
+# Docker - Introduction
 ---
 
 Lets start with containers,
 
-##### Containers
+## Containers
 ---
 
 > Containers are an abstraction at application layer that packages the codes and dependencies together.
@@ -22,16 +22,15 @@ Difference between VM and containers are,
 |Needs bigger footprint (RAM and storage)|Smaller footprint (No RAM and individual storage)|
 
 
-##### Docker
+## Docker
 ---
 
-**A New fish in IT Ocean**-**A Containerization Platform**
+**A New fish in IT Ocean** - **A Containerization Platform**
 
 > Docker is an open platform for developers and system admins to build, ship and run
 containerized applications.
 
-#### Benefits of Docker
----
+### Benefits of Docker
 
 - Reproducibility
     Like **JVM**, docker also has same facility to run processes in any device. 
@@ -48,15 +47,13 @@ containerized applications.
     Works well with tools like Travis, Jenkins, and Wercker.
     
     
-##### Note
----
+### Note
 
 Docker is still under development so that getting new features and backward compatibility with previous versions is not guaranteed.
 Docker swarm may not be sufficient as standalone cluster manager as announced recently that it has support for kubernetes. 
 
 
-##### Installation on CentOS
----
+### Installation on CentOS
 
 Find the proper and detailed steps in official page - [Install docker on CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 
@@ -140,7 +137,11 @@ Or we can check by command where container is running or not.
 docker container ls -a
 ``` 
 
-##### References
+### Docker commands
+
+- [Official doc](https://docs.docker.com/engine/reference/run/)
+
+### References
 ---
 
 - [Docker Essentials by Udemy](https://www.udemy.com/docker-essentials)

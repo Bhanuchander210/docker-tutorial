@@ -1,6 +1,6 @@
 ## Architecture
 
-###### Stages of Docker
+### Stages of Docker
 
 |Stages|Format|
 |-----|------|
@@ -8,13 +8,13 @@
 |Ship | Docker Image|
 |Run  | Containers|
 
-###### Eco-System
+### Eco-System
 
 - Docker Client
 - Docker Host
 - Docker Registry
 
-###### Docker Client
+### Docker Client
 
 It is the medium or machine through which we as user interact with **docker**.
 There are two ways to interact,
@@ -22,7 +22,7 @@ There are two ways to interact,
 - Docker CLI
 - Docker API 
 
-###### Docker Host
+### Docker Host
 
 It is the machine which really performs the containerization by running the **docker daemon**.
 Docker daemon listens and performs the regarding actions asked by docker client.
@@ -38,7 +38,7 @@ Docker daemon listens and performs the regarding actions asked by docker client.
 Container <-----> Docker Image <-----> Docker Daemon
 ```
 
-###### Docker Registry
+### Docker Registry
 
 Docker registry is a simple hub which stores the docker images and serves for others. Normal command `docker pull` pulls the
 image from registry.

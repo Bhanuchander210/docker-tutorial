@@ -32,7 +32,7 @@ Docker Image ----
 - [`docker pruning`](#)
 
 
-#### Docker search
+### Docker search
 
 - Total search
 
@@ -52,7 +52,7 @@ docker search --filter "is-official=true" ubuntu
 docker search --format "table {{.Name}} {{.IsOfficial}}" ubuntu
 ```
  
-#### Docker images
+### Docker images
 
 - To list all images
 ```commandline
@@ -83,7 +83,7 @@ nginx               1.10.0              16666ff3a57f        2 years ago         
 nginx               1.10.0-alpine       8328c2365672        2 years ago         60.6MB
 ```
 
-#### Docker Inspect
+### Docker Inspect
 
 - To inspect the repo
 ```commandline
@@ -108,7 +108,7 @@ It will show you a description *json* file like this,
 
 The total output file also attached here as [ubuntu_latest.json](/assets/files/ubuntu_latest.json).
 
-#### Docker history
+### Docker history
 
 - To view the history of a docker image
 
@@ -116,7 +116,7 @@ The total output file also attached here as [ubuntu_latest.json](/assets/files/u
 docker image history ubuntu:latest 
 ```
 
-#### Docker pruning
+### Docker pruning
 
 - To remove the not-running things
 
@@ -128,7 +128,7 @@ docker network prune
 docker system prune
 ```
 
-#### Docker Image Size
+### Docker Image Size
 
 - To view the Image size
 
