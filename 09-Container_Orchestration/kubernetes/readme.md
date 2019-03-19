@@ -14,7 +14,7 @@ Container Orchestrator which can replace docker-compose as rich in deployment/re
 
 ### Pod, Replica-Set and Deployment
 
-<img src="https://github.com/Bhanuchander210/docker-tutorial/raw/master/assets/img/eplicaset.png" width="100">
+<img src="https://github.com/Bhanuchander210/docker-tutorial/raw/master/assets/img/replicaset.png" width="100">
 
 - Pod, basically contains one or more than one containers.
 - Pod is the most basic entity in kubernetes.
@@ -59,10 +59,51 @@ minikube start
 
 ### Some quick commands
 
-- Kubernet describe about pod logs
+- Kubernetes list running pods
+
+```commandline
+kubectl get pod
+```
+Output will contains pod name and current status.
+
+```text
+NAME                          READY   STATUS    RESTARTS   AGE
+devops-6b99f8d648-z6mzq       1/1     Running   0          2d17h
+mysql-devop-96cd8596f-gmlg9   1/1     Running   3          2d19h
+wordpress-5b8b869d84-vlq57    1/1     Running   3          2d19h
+```
+
+- Kubernetes describe about pod logs
 
 ```commandline
 kubectl describe pod pod-name
+```
+
+- Update the deployment with zero-down time
+
+```commandline
+kubectl apply -f config-file.yaml
+```
+
+- Import local image into kubernetes
+
+```commandline
+# Start minikube
+minikube start
+
+# Set docker env
+eval $(minikube docker-env)
+
+# Build image
+docker build -t imageName:version
+
+# Run in minikube
+kubectl run hello-foo --image=foo:0.0.1 --image-pull-policy=Never
+
+# Or it can be set inside the yaml config file like shown below
+# - image: imageName:latest
+#   name: imageName
+#   imagePullPolicy: Never
 ```
 
 ### kubernetes objects
@@ -81,34 +122,6 @@ configmaps                        cm                                          tr
 endpoints                         ep                                          true         Endpoints
 events                            ev                                          true         Event
 ``` 
-
-
-### How to update the deployment with zero-down time
-
-```commandline
-kubectl apply -f config-file.yaml
-```
-
-### How to import local image into kubernetes
-
-```commandline
-# Start minikube
-minikube start
-
-# Set docker env
-eval $(minikube docker-env)
-
-# Build image
-docker build -t imageName:version .
-
-# Run in minikube
-kubectl run hello-foo --image=foo:0.0.1 --image-pull-policy=Never
-
-# Or it can be set inside the yaml config file like shown below
-# - image: imageName:latest
-#   name: imageName
-#   imagePullPolicy: Never
-```
 
 ### References
 
