@@ -59,6 +59,8 @@ As shown in the figure,
 - Docker volume inspect volName
 - Docker volume create
 
+## Quick Details
+
 - Mounting the volume to the Container
 
 ```commandline

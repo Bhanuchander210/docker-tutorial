@@ -17,6 +17,8 @@ A Container run provides us,
 - Memory  (#RAM)
 - Storage
 
+## Quick Details
+
 ### Creating containers
 
 - Method 1. Using create command

@@ -73,6 +73,20 @@ Here you can see, This file contains two various sections,
 - `docker-compose ps` Status and details of docker-compose services. 
 - `docker-compose top` Details of process running by docker-compose.
 
+## Quick Details
+
+### Down with removing options
+
+Need to be careful while using this command,
+
+```commandline
+// Removes all volumes created by current path ./docker-compose.yaml
+docker-compose down -v
+
+// Removes all images associated with this ./docker-compose.yaml
+docker-compose down --rmi
+```
+
 To view more See this [official docker-compose documentation](https://docs.docker.com/compose/reference/overview).
 
 [next](/08-Dockercompose)

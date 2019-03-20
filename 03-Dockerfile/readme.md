@@ -52,6 +52,9 @@ It has sequential instructions, that can be categorized as
 |STOPSIGNAL| sets the system call signal that will be sent to the container to exit.|
 |ENTRYPOINT| configures a container that will run as an executable.|
 
+
+## Quick Details
+
 ### Build Docker Filer
 
 **Step 1.** Create a dockerfile
@@ -85,7 +88,7 @@ imageName             latest              92e0fbf67907        10 seconds ago    
 
 Here we can also use configuration instructions,
 
-Example Docker file
+### Example Docker file
 
 ```text
 FROM ubuntu:16.04
@@ -100,6 +103,8 @@ ENV SHELL /bin/bash
 ENV LOGNAME bhanuchander
 CMD ["bash"]
 ```
+
+### Quick Commands
 
 It uses the command `RUN` with some configuration commands such as creating directories, update and installations.
 

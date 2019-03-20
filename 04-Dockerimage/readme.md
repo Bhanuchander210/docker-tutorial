@@ -32,6 +32,8 @@ Docker Image ----
 - [`docker pruning`](#)
 
 
+## Quick Details
+
 ### Docker search
 
 - Total search

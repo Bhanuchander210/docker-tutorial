@@ -57,9 +57,10 @@ minikube start
 
 - [Command page](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
 
-### Some quick commands
 
-- Kubernetes list running pods
+## Quick Details
+
+### Kubernetes list running pods
 
 ```commandline
 kubectl get pod
@@ -73,19 +74,19 @@ mysql-devop-96cd8596f-gmlg9   1/1     Running   3          2d19h
 wordpress-5b8b869d84-vlq57    1/1     Running   3          2d19h
 ```
 
-- Kubernetes describe about pod logs
+### Kubernetes describe about pod logs
 
 ```commandline
 kubectl describe pod pod-name
 ```
 
-- Update the deployment with zero-down time
+### Update the deployment with zero-down time
 
 ```commandline
 kubectl apply -f config-file.yaml
 ```
 
-- Import local image into kubernetes
+### Import local image into kubernetes
 
 ```commandline
 # Start minikube

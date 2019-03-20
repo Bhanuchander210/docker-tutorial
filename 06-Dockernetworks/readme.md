@@ -39,6 +39,7 @@ underlay network which collects the ip related details of all connected containe
 
 Each containers which connected to this network, should be assigned by a Physical MAC address. See the official [documentation](https://docs.docker.com/network/macvlan/) for more details.
 
+## Quick Details
 
 ### Creating Docker Network
 
@@ -72,16 +73,15 @@ Now it will connect to the new bridge along with the default bridge.
 To inspect this:
 
 ```text
-[bhanuchander@bhanuchander apache]$ docker container inspect --format "{{.NetworkSettings.Networks}}" apachecontainer
+$ docker container inspect --format "{{.NetworkSettings.Networks}}" apachecontainer
 map[bridge:0xc4205fc000 testbridge-1:0xc4205fc0c0]
 ```
 
 The total inspected specification file is attached here as [connected_apachecontainer.json](/assets/files/connected_apachecontainer.json).
 
 
-### Quick Commands
-
-- To get the container ip 
+### To get the container ip
+ 
 ```commandline
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' containerName
 ```
