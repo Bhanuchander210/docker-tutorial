@@ -14,7 +14,7 @@ Container Orchestrator which can replace docker-compose as rich in deployment/re
 
 ### Pod, Replica-Set and Deployment
 
-<img src="https://github.com/Bhanuchander210/docker-tutorial/raw/master/assets/img/replicaset.png" width="100">
+<img src="https://github.com/Bhanuchander210/docker-tutorial/raw/master/assets/img/replicaset.png" width="500">
 
 - Pod, basically contains one or more than one containers.
 - Pod is the most basic entity in kubernetes.

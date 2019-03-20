@@ -136,5 +136,22 @@ docker system prune
 docker image inspect imageName:latest --format='{{.Size}}'
 ```
 
+### Docker Image Share
+
+- save that image to a .tar file.
+```commandline
+docker save --output imageName.tar imageName
+```
+
+- Load the image from .tar file
+```commandline
+docker load --input imageName.tar
+```
+
+### What is dangling images ?
+
+- Dangling images are created while creating new build of a image without renaming / updating the version. So that
+the old image converted into dangling images like `<none>:<none>`.
+
 [next](/05-Container)
 [home](/)

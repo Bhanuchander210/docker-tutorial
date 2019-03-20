@@ -95,6 +95,13 @@ Here we need to tell the exact port for expose.
 This command allow the docker itself to map a port.
 - `docker container run -itd -name contName -P imageName`
 
+- Port mapping on live container
+
+```commandline
+docker stop containerName
+docker commit tempImageName
+docker run -p 8080:8080 --name -td tempImageName
+```
 
 Notes :
 
