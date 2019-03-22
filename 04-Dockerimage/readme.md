@@ -155,5 +155,12 @@ docker load --input imageName.tar
 - Dangling images are created while creating new build of a image without renaming / updating the version. So that
 the old image converted into dangling images like `<none>:<none>`.
 
+- List and Removing Dangling Images
+
+```commandline
+docker images -f dangling=true
+docker rmi $(docker images -f dangling=true -q)
+```
+
 [next](/05-Container)
 [home](/)
