@@ -30,14 +30,20 @@ So it can be isolated from host network. Here we can define **IP Range** and **S
 
 Or we can use **IPs** to communicate the containers which are provided by IPAM Drivers.
 
+![bridge](http://img.scoop.it/bmExZyvGWidultcwx9hCb7nTzqrqzN7Y9aBZTaXoQ8Q=)
+
 - Overlay Network
 
 This network used for **Swarm Mode** of docker. Multiple cluster of hosts connected in single network. It placed on the 
 underlay network which collects the ip related details of all connected containers.
 
+![overlay](http://img.scoop.it/1nNoIXGkJiDax7l5g5GxH7nTzqrqzN7Y9aBZTaXoQ8Q=)
+
 - Macvlan Network
 
 Each containers which connected to this network, should be assigned by a Physical MAC address. See the official [documentation](https://docs.docker.com/network/macvlan/) for more details.
+
+![macvlan](http://img.scoop.it/zD6OR5JZu3qF9dxWL79Gc7nTzqrqzN7Y9aBZTaXoQ8Q=)
 
 ## Quick Details
 
@@ -85,6 +91,12 @@ The total inspected specification file is attached here as [connected_apachecont
 ```commandline
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' containerName
 ```
+
+
+### Reference
+
+- [Docker network](https://docs.docker.com/network/)
+- [Understanding docker networking](https://blog.docker.com/2016/12/understanding-docker-networking-drivers-use-cases/)
 
 [next](/07-Dockerstorage)
 [home](/)
