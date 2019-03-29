@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+   db:
+     image: mysql:5.7
+     container_name: mysql_database
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: password
+       MYSQL_DATABASE: testdb
+       MYSQL_USER: test
+       MYSQL_PASSWORD: password
+     networks:
+         default:
+             ipv4_address: 192.168.12.221
+volumes:
+    db_data:
+networks:
+    default:
+        external:
+            name: mybridgenew
