@@ -134,7 +134,6 @@ we can scale the service running in cluster manager like shown below command,
 
 ```commandline
 docker service scale web-server=5
-
 ```
 Output :
 
@@ -185,6 +184,15 @@ docker stack deploy -c docker-compose.yaml mystack
 ```
 `in manager`
 
-### Useful -Posts
+
+## Distribution on Overlay Network
+
+- https://blog.octo.com/en/how-does-it-work-docker-part-2-swarm-networking/
+- https://www.digitalocean.com/community/tutorials/how-to-configure-the-linux-firewall-for-docker-swarm-on-ubuntu-16-04
+
+
+### Useful-Posts
 
 - https://stackoverflow.com/questions/34336218/is-there-a-way-to-force-docker-machine-to-create-vm-with-a-specific-ip
+- https://stackoverflow.com/questions/47756029/how-docker-swarm-implements-a-volume-sharing
+- https://stackoverflow.com/questions/36459851/single-host-multi-container-v-s-multi-host-single-container
