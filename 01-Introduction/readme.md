@@ -6,8 +6,8 @@ Lets start with containers,
 ## Containers
 ---
 
-> Containers are an abstraction at application layer that packages the codes and dependencies together.
-and ships the application and run-time environment.
+> Containers are an abstraction at application layer that packages the codes and dependencies together, 
+ships the application and run-time environment.
 
 Difference between VM and containers are,
 
