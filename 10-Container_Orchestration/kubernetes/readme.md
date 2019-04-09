@@ -34,7 +34,9 @@ The Importance of Deployment,
 ### Before you start
 
 Initially The communication between a **kubernetes cluster** and our `kubectl` command line tool should be established.
-See the official document [here](https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/#before-you-begin)
+See the official documentation,
+ 
+ - [Run single instance stateful application](https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/#before-you-begin)
 
 Try the kubernetes clusters
 
@@ -45,6 +47,14 @@ Try the kubernetes clusters
 - [Play with Kubernetes](http://labs.play-with-k8s.com/) (Online)
 
 ### Minikube
+
+It is a lightweight Kubernetes implementation that creates a VM on your local machine and deploys 
+a simple cluster containing only one node. Minikube is available for Linux, macOS, and Windows systems. 
+The Minikube CLI provides basic bootstrapping operations for working with your cluster, including start,
+stop, status, and delete.
+
+See the [documentation](https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/)
+
 
 - [How to setup and start minikube ?](https://kubernetes.io/docs/tasks/tools/install-minikube/)
 - Start minikube once installed
