@@ -81,5 +81,9 @@ docker container inspect --format "{{json .Mounts}}" containerName | python -m j
 
 So these kind of mounted volumes can be found in `/var/lib/docker/volumes`
 
+##### References :
+
+- [How to share data between docker containers by DO](https://www.digitalocean.com/community/tutorials/how-to-share-data-between-docker-containers)
+
 [next](/07-Dockerstorage)
 [home](/)

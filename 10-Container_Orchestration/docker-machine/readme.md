@@ -13,7 +13,7 @@ Official : [Documentation](https://docs.docker.com/machine/install-machine/)
 - Creating the Manager
 
 ```commandline
-docker-machine create --drive virtualbox manager 
+docker-machine create --driver virtualbox manager 
 ```
 If you face error downloading **boot2docker.iso** use this command download manually, 
 `curl -L https://github.com/boot2docker/boot2docker/releases/download/v18.09.4-rc1/boot2docker.iso > $DOCKER_REG_HOME/.docker/machine/cache/boot2docker.iso`.
@@ -196,3 +196,4 @@ docker stack deploy -c docker-compose.yaml mystack
 - https://stackoverflow.com/questions/34336218/is-there-a-way-to-force-docker-machine-to-create-vm-with-a-specific-ip
 - https://stackoverflow.com/questions/47756029/how-docker-swarm-implements-a-volume-sharing
 - https://stackoverflow.com/questions/36459851/single-host-multi-container-v-s-multi-host-single-container
+- https://stackoverflow.com/questions/41449454/whats-the-main-advantage-of-using-replicas-in-docker-swarm-mode

@@ -1,29 +1,22 @@
 version: '2.2'
 services:
-  db:
-    image: mysql:5.7
-    container_name: localmysql
-    volumes:
-      - localdb_data:/var/lib/mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: itachi
-      MYSQL_USER: bhanuchander
-      MYSQL_PASSWORD: password
-    healthcheck:
-      test: "/usr/bin/mysql --user=root --password=password --execute \"SHOW DATABASES;\""
-      interval: 2s
-      timeout: 20s
-      retries: 10
-    deploy:
-      replicas: 3
-      resources:
-        limits:
-          cpus: '0.1'
-          memory: 50M
-        reservations:
-          cpus: '0.001'
-          memory: 20M
+   db:
+     image: mysql:5.5
+     container_name: localmysqldb
+     ports:
+       - "3306:3306"
+     volumes:
+       - test_db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: password
+       MYSQL_DATABASE: googledb
+       MYSQL_USER: googler
+       MYSQL_PASSWORD: password
+     healthcheck:
+       test: "mysql --user=root --password=password --execute \"SHOW DATABASES;\""
+       interval: 5s
+       timeout: 60s
+       retries: 20
 volumes:
-  localdb_data:
+    test_db_data:
