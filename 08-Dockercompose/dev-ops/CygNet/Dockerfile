@@ -10,8 +10,9 @@ WORKDIR /usr/CygNet
 
 COPY . .
 
-RUN ln -sf /usr/java/jdk1.8.0_191/ jre
+RUN ln -sf /usr/java/jdk1.8.0_211/ jre
 
 WORKDIR /usr/CygNet/bin
 
 CMD sh start.sh && exec /bin/sh -c "trap : TERM INT; (while true; do sleep 1000; done) & wait"
+

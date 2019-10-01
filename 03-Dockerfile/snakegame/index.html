@@ -16,9 +16,26 @@
   canvas {
     border: 1px solid white;
   }
+  p{
+    color: white;
+  }
   </style>
 </head>
 <body>
+<script>
+  console.log(location.hostname);
+  function myFunction() {
+  var x = location.hostname;
+  document.getElementById("demo").innerHTML= x;
+}
+</script>
+<div>
+  <p>Click the button to display the hostname of the current URL.</p>
+  <button onclick="myFunction()">Try it</button>
+  <p id="demo">hai</p>
+</div>
+<br>
+<br>
 <canvas width="400" height="400" id="game"></canvas>
 <script>
 var canvas = document.getElementById('game');

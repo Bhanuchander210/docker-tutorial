@@ -139,3 +139,4 @@ events                            ev                                          tr
 - [Kubernetes official doc](https://kubernetes.io/docs/home/)
 - [Kubernetes by udemy](https://www.udemy.com/kubernetes-docker)
 - [kubernetes cluster - 50 useful tools](https://caylent.com/50-useful-kubernetes-tools/)
+- [Training by Google](https://cloud.google.com/training/#intros)
